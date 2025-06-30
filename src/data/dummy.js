@@ -142,7 +142,7 @@ const customerGridStatus = (props) => (
 );
 export const areaPrimaryXAxis = {
   valueType: 'DateTime',
-  labelFormat: 'y',
+  labelFormat: 'y', 
   majorGridLines: { width: 0 },
   intervalType: 'Years',
   edgeLabelPlacement: 'Shift',
@@ -215,19 +215,24 @@ export const areaCustomSeries = [
     xName: 'x',
     yName: 'y',
     name: 'USA',
-    opacity: '0.8',
+    opacity: 0.8,
     type: 'SplineArea',
-    width: '2',
-
+    width: 2,
+    marker:{ visible: true, isFilled: true, height: 6, width: 6, shape: 'Circle' },
+    border: { color: '#0288D1', width: 5 },
+    fill: '#0288D1'
   },
   {
     dataSource: areaChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'France',
-    opacity: '0.8',
+    opacity: 0.8,
     type: 'SplineArea',
-    width: '2',
+    width: 2,
+    marker:{ visible: true, isFilled: true, height: 6, width: 6, shape: 'Circle' },
+    border:{ color: '#388E3C',width: 5 },
+    fill: '#388E3C'
   },
   {
     dataSource: areaChartData[2],
@@ -237,6 +242,9 @@ export const areaCustomSeries = [
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
+    marker:{ visible: true, isFilled: true, height: 6, width: 6, shape: 'Circle' },
+     border:{ color: '#FB8C00',width: 5 },
+     fill: '#FB8C00'
   },
 ];
 
@@ -3581,6 +3589,7 @@ export const financialChartData = [
     low: 85.7685,
     close: 90.5257,
     volume: 660187068,
+    border:{color:'black' , width: 0.2},
   },
   {
     x: new Date('2012-04-09'),

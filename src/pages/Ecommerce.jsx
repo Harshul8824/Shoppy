@@ -3,10 +3,12 @@ import {BsCurrencyDollar} from 'react-icons/bs'
 import { GoDotFill } from "react-icons/go";
 import {Stacked, Pie, Button, SparkLine} from '../components'
 import {earningData, SparklineAreaData, ecomPieChartData} from '../data/dummy'
-import { useStateContext } from '../contexts/ContextProvider'
+import { ContextProvider, useStateContext } from '../contexts/ContextProvider'
 import welcome from '../data/welcome.svg'
 
 const Ecommerce = () => {
+
+  const {currentColor} = useStateContext();
   return (
     <div className='mt-12'>
 
@@ -31,7 +33,7 @@ const Ecommerce = () => {
       <div className='mt-6'>
         <Button
           color="white"
-          bgColor= "blue"
+          bgColor= {currentColor}
           text="Download"
           borderRadius="10px"
         />
@@ -106,9 +108,9 @@ const Ecommerce = () => {
             id = "line-sparkline"
             height = "80px"
             data = {SparklineAreaData}
-            color = "blue"
+            color = {currentColor}
             type = "Line"
-            currentColor = "blue"
+            currentColor = {currentColor}
             width = "250px" 
             />
           </div>
@@ -116,7 +118,7 @@ const Ecommerce = () => {
           <div className='mt-10'>
             <Button 
             color = "white"
-            bgColor = "blue"
+            bgColor = {currentColor}
             text = "Download Report"
             borderRadius = "10px"
             />
