@@ -5,8 +5,12 @@ import { ColorMappingPrimaryXAxis, colorMappingData, ColorMappingPrimaryYAxis,ra
 
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Highlight, DataLabel, Tooltip, ILoadedEventArgs, Legend, ChartTheme, RangeColorSettingsDirective, RangeColorSettingDirective } from '@syncfusion/ej2-react-charts';
 
+import { useStateContext } from '../../contexts/ContextProvider'
+
 const ColorMapping = () => {
+    const {currentMode} = useStateContext();
   return (
+
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
       <ChartsHeader category="Color Mappping" title="USA CLIMATE - WEATHER BY MONTH" />
 
@@ -17,6 +21,7 @@ const ColorMapping = () => {
   chartArea={{ border: { width: 0 }, margin: { bottom: 12 } }}
   legendSettings={{ mode: 'Range', background : 'white' }}
    tooltip={{enable : true}}
+   background={currentMode === 'Dark' ? '#33373E' : '#fff'}
   >
         <Inject services={[ColumnSeries, Tooltip, Category, Legend]} />
             <SeriesCollectionDirective>

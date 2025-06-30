@@ -73,6 +73,7 @@ const App = () => {
                 <Route path='/stacked' element = {<Stacked />}></Route>
             </Routes> 
           </div>
+          <Footer />
         </div>
         </div>
       </BrowserRouter>

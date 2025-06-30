@@ -12,9 +12,9 @@ const Ecommerce = () => {
   return (
     <div className='mt-12'>
 
-    <div className="flex flex-wrap lg:flex-nowrap justify-center">
+    <div className="flex flex-col lg:flex-nowrap justify-center items-center">
   {/* Main Earnings Card with Background Image */}
-  <div className="relative w-full lg:w-3/5 h-44 m-3 rounded-xl overflow-hidden shadow-md">
+  <div className="relative w-full lg:w-4/5 h-44 m-3 rounded-xl overflow-hidden shadow-md">
     
     {/* Background Image */}
     <img
@@ -70,8 +70,8 @@ const Ecommerce = () => {
       </div>
     ))}
   </div>
-
 </div>
+
     <div className='flex gap-10 flex-wrap justify-center'>
      <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
       <div className='flex justify-between'>
