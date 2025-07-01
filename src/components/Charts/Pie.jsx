@@ -19,10 +19,7 @@ const Pie = ({ id, data, legendVisiblity, height }) => {
         <AccumulationChartComponent id='pie-chart' tooltip={{ enable: true}} background={currentMode === 'Dark' ? '#33373E' : '#fff'}       legendSettings={{ visible: legendVisiblity, background: 'white' }}>
                     <Inject services={[AccumulationLegend, PieSeries, AccumulationTooltip, AccumulationDataLabel]} />
                     <AccumulationSeriesCollectionDirective>
-                        <AccumulationSeriesDirective dataSource={pieChartData} name='Sale' xName='x' yName='y' borderRadius={3} border={{color: '#FFFFFF', width: 1}} dataLabel={{ visible: true, position: 'Outside', name: 'text', font: {
-              fontWeight: '600',
-              color: '#fff',
-            }}} explode  />
+                     <AccumulationSeriesDirective dataSource={pieChartData} name='Browser' xName='x' yName='y' borderRadius={3} innerRadius='0%' explode={true} explodeOffset='10%' explodeIndex={0}  border={{color: '#FFFFFF', width: 1}} dataLabel={{ visible: true, position: 'Outside', name: 'text', connectorStyle:{ type: 'Curve'} }} />
                     </AccumulationSeriesCollectionDirective>
                 </AccumulationChartComponent>
     </div>
